@@ -1,9 +1,12 @@
 # odoo-recipe-costing
+
 Recipe Management and costing module for Odoo ERP suite
 
 The first step in a profitable data-driven restaurant is know the cost of the recipes used in your establishment.
 
 By tying Ingredients to vendors, knowing their Yield Percentage, and calculating the As Served (AS) and Edible Portion (EP) of each item, you can better control costs through better ordering and less wastage.
+
+## Features
 
 This module provides a set of new data types for use in recipe costing:
 
@@ -16,3 +19,11 @@ Recipes - Assembled with one or more Ingredients, plus instructions for the cook
 Dishes - Assembled from one or more Recipes, these are the plates / menu items as the are served
 
 	This is most useful in the associated Menu Engineering module
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+## Licensing
+
+The code in this project is licensed under MIT license.
