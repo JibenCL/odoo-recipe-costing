@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-	<!-- Data records go here -->
+		<act_window
+			id="ingredient_action"
+			name="Ingredients"
+			res_model="recipe.Ingredient" />
+		<menuitem
+			id="ingredient_menu"
+			name="Ingredients"
+			action="ingredient_action"
+			parent=""
+			sequence="5" />
+		<!-- Data records go here -->
+		<record id="ingredient_view_form" model="ir.ui.view">
+			<field name="name">Ingredient Form</field>
+			<field name="model">recipe.Ingredient</field>
+			<field name="arch">xml
+				<form>
+					<group>
+						<field name="name" />
+						<field name="description" />
+						<field name="purchase_unit" />
+						<field name="use_unit" />
+						<field name="yield" />
+						<field name="categories" widget="many2many_tags" />
+						<field name="recipes" widget="many2many_tags" />
+						<field name="suppliers" widget="many2many_tags" />
+					</group>
+					<group>
+						<field name="date_released" />
+					</group>
+				</form>
+			</field>
+		</record>
 	</data>
 </openerp>
