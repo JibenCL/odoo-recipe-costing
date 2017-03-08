@@ -1,73 +1,60 @@
+# -*- coding: utf-8 -*-
 {
+	'name': 'Recipe Costing',
+	
+	'summary': "Recipe Management & Costing Module",
+	
+	# Description: Multiline, plain text or RST (http://docutils.sourceforge.net/docs/user/rst/quickstart.html)
+	'description': """  """,
+	
+	'author': "Jon Tillman",
+	
+	'license': "AGPL-3"
+    
+	'website': "",
+	
+	# Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml for the full list
+    'category': 'Specific Industry Applications',
+	'category': 'Inventory',
+    'version': '0.1',
+	
+	# any module necessary for this one to work correctly
+    'depends': ['base'],
+	
+	# always loaded
+    'data': [
+        'security/ir.model.access.csv',
+    ],
+	
+	# only loaded in demonstration mode
+    'demo': [
+        'demo.xml',
+    ],
+	
+	'installable': 'true'
+}
 
-'name': 'Base',
+# Ingredients Model
+{
+	'name': "Ingredients",
+	'summary': "Ingredient Management",
+	'depends': ['base'],
+	'data': ['views/ingredient.xml',],
+}
 
-'version': '1.3',
+# Recipe Model
+{
+	'name': "Recipe",
+	'summary': "Recipe Management & Costing",
+	'depends': ['base'],
+	'data': ['views/recipe.xml',],
+}
 
-'category': 'Hidden',
-
-'description': """
-
-The kernel of OpenERP, needed for all installation.
-
-===================================================
-
-""",
-
-'author': 'OpenERP SA',
-
-'maintainer': 'OpenERP SA',
-
-'website': 'http://www.openerp.com',
-
-'depends': [],
-
-'data': [
-
-'base_data.xml',
-
-'res/res_currency_data.xml',
-
-'res/res_country_data.xml',
-
-'security/base_security.xml',
-
-'module/module_report.xml',
-
-'module/wizard/base_module_update_view.xml',
-
-'res/res_company_view.xml',
-
-'res/res_security.xml',
-
-'security/ir.model.access.csv',
-
-],
-
-'demo': [
-
-'base_demo.xml',
-
-'res/res_partner_demo.xml',
-
-'res/res_partner_demo.yml',
-
-'res/res_partner_image_demo.xml',
-
-],
-
-'test': [
-
-'tests/base_test.yml',
-
-'tests/test_osv_expression.yml',
-
-'tests/test_ir_rule.yml', # <-- These tests modify/add/delete ir_rules.
-
-],
-
-'installable': True,
-
-'auto_install': True,
-
+# Categories Model
+{
+	'name': "Categories",
+	'summary': "Category Management",
+	'depends': ['base'],
+	'data': ['views/category.xml',],
 }
